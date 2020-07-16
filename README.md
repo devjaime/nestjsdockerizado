@@ -34,6 +34,7 @@ services:
     ports: ["3000:3000"]
     tty: true
 ```
+[![Nestjs](http://img.youtube.com/vi/8EU2ZEmHwPk/0.jpg)](http://www.youtube.com/watch?v=8EU2ZEmHwPk "Nestjs")
 
 Estare escribiendo en mi blog una serie de articulos de nestjs los cuales puede revisar en:
 <p align="center">
