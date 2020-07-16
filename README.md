@@ -35,8 +35,9 @@ services:
     tty: true
 ```
 
-Estare escribiendo en mi blog una serie de articulos de nestjs los cuales puede revisar en
+Estare escribiendo en mi blog una serie de articulos de nestjs los cuales puede revisar en:
 <p align="center">
+  <a href="https://jaimehz.com/post/nestbackend/" target="blank" </a>
   <a href="https://jaimehz.com/post/nestbackend/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
 
