@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  api:
+    container_name: nestjs-api
+    build: .
+    environment:
+      - PORT=3000
+      - NODE_ENV=development
+    volumes:
+      - .vscode:/api/.vscode
+    ports: ["3000:3000"]
+    tty: true
+
