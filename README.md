@@ -1,3 +1,39 @@
+# Plantilla Nest Dockerizada para desarrollo
+Esta plantilla tiene ciertas modificaciones que explico a continuación.
+
+Se agrego un archivo .devcontainer y .vscode para la depuración dockerizada del proyecto.
+[imagen]
+
+El archivo Dockerfile tiene lo minimo para poder ejecutar nest dockerizado en desarrollo
+```docker
+FROM node:latest
+
+COPY . /api
+
+WORKDIR /api
+
+RUN npm i -g @nestjs/cli
+
+RUN npm install --only=production
+```
+
+En el archivo docker-compose.yml existe la exposición al puerto y en el caso de que se quieran agregar base de datos o recursos asociados como otros contenedores pueden ser incluidos en este docker compose.
+
+```docker
+version: "3.7"
+
+services:
+  api:
+    container_name: nestjs-api
+    build: .
+    environment:
+      - PORT=3000
+      - NODE_ENV=development
+    volumes:
+      - .vscode:/api/.vscode
+    ports: ["3000:3000"]
+    tty: true
+```
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
